@@ -1,0 +1,2 @@
+demo_bot_gazebo
+-DCATKIN_DEVEL_PREFIX=/home/light/Simulation/devel -DCMAKE_INSTALL_PREFIX=/home/light/Simulation/install -G Unix Makefiles

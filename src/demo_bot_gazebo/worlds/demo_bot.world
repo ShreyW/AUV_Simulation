@@ -1,0 +1,63 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <!--export GAZEBO_MODEL_PATH=~/Simulation/src/demo_bot_gazebo/models:$GAZEBO_MODEL_PATH-->
+  <world name="default">
+
+<!--
+    <physics default="1" name="physics1" type="ode">
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>1000</real_time_update_rate>
+      <max_contacts>20</max_contacts>
+        <ode>
+          <solver>
+            <type>world</type>
+            <min_step_size>0.0001</min_step_size>
+            <friction_model>pyramid_model</friction_model>
+          </solver>
+        <constraints>
+          <cfm>0</cfm>
+          <erp>0.2</erp>
+          <contact_max_correcting_vel>10</contact_max_correcting_vel>
+          <contact_surface_layer>0.001</contact_surface_layer>
+        </constraints>
+      </ode>
+  </physics>
+-->
+
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <include>
+      <uri>model://postbox</uri>
+      <name>postbox</name>
+      <static>false</static>
+      <pose>4 4 2 0 0 0</pose>
+    </include>
+
+    <include>
+			<uri>model://sample1</uri>
+      <name>sample1</name>
+      <pose>2 2 2 0 0 0</pose>
+		</include>
+
+    <light type="point" name="source1">
+      <pose>2 1 3 0 0 0</pose>
+      <diffuse>68 41 237 255</diffuse>
+      <specular>237 212 0 255</specular>
+      <attenuation>
+        <range>20</range>
+        <linear>0.2</linear>
+        <constant>-0.2</constant>
+        <quadratic>0.01</quadratic>
+      </attenuation>
+      <cast_shadows>true</cast_shadows>
+    </light>
+
+  </world>
+</sdf>
