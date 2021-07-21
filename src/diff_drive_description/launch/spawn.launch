@@ -2,7 +2,7 @@
 <launch>
     <param name="robot_description" command="cat '$(find diff_drive_description)/urdf/diff_drive.urdf'" />
 
-    <arg name="x" default="1"/>
+    <arg name="x" default="0"/>
     <arg name="y" default="0"/>
     <arg name="z" default="0"/>
 
